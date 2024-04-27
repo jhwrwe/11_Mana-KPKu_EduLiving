@@ -1,28 +1,33 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
     /**
      * Run the migrations.
      */
+
     public function up()
     {
-        Schema::create('user_animals', function (Blueprint $table) {
+        Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('animal_id');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('animal_id')->constrained()->onDelete('cascade');
+            $table->string('animal_name');
+            $table->string('image');
+            $table->string('latin_name');
+            $table->unsignedBigInteger('species_id');
+            $table->foreign('species_id')->references('id')->on('specieses')->onDelete('cascade');
+            $table->string('habitat');
+            $table->string('continent');
+            $table->text('description');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('user_animals');
+        Schema::dropIfExists('animals');
     }
 };

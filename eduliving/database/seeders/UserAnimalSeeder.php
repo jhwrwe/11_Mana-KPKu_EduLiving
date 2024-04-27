@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User_Animal;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserAnimalSeeder extends Seeder
 {
@@ -12,6 +13,9 @@ class UserAnimalSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        User_Animal::create([
+            'user_id' => '1',
+            'animal_id'=> '1'
+        ]);
     }
 }
