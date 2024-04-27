@@ -16,17 +16,33 @@
 
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Set height of container */
+        .image-container {
+          height: 30vh; /* Set height to 10% of viewport height */
+          overflow: hidden; /* Hide overflowing content */
+        }
+
+        /* Set background image */
+        .image-container {
+          background-image: url('images/kebun-binatang-surabaya_169.jpeg');
+          background-size: cover; /* Scale the background image to cover the entire container */
+          background-position: center; /* Center the background image */
+          width: 100vw; /* Set width to 100% of viewport width */
+        }
+      </style>
 
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm align-items-center"
-            style="height: 80px;background-color: rgb(22, 99, 0);">
+            style="height: 80px;background-color: rgb(44, 86, 0);">
             <div class="container-fluid d-flex align-items-center mx-auto">
                 <a class="navbar-brand" href="#">
                     <img src="/images/zoo_logo.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
@@ -47,9 +63,9 @@
                                     href="\">Home</a>
                             </li>
                             @if (Route::has('login'))
-                            <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
                             @endif
 
                             @if (Route::has('register'))
@@ -59,8 +75,9 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -78,9 +95,10 @@
                             </li>
                             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? ''}}" href="/">Home</a>
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? ''}}" href="/animals">Animals</a>
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? ''}}" href="#">Find Animals</a>
+                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="/">Home</a>
+                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="/animals">Animals</a>
+                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="#">Find
+                                        Animals</a>
                                 </div>
                             </div>
                         @endguest
@@ -103,10 +121,9 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+
     </div>
+    @yield('content')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
