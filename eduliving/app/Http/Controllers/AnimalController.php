@@ -26,3 +26,5 @@ class AnimalController extends Controller
          return view('galeri', compact('user_animals'));
     }
 }
+
+
