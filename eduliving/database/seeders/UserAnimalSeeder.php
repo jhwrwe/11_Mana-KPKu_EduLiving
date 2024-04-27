@@ -4,9 +4,8 @@ namespace Database\Seeders;
 use App\Models\User_Animal;
 use Illuminate\Support\Facades\DB;
 
-
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserAnimalSeeder extends Seeder
 {
