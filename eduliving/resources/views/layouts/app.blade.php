@@ -85,7 +85,10 @@
     @endif
     @if (Auth::user()->isAdmin())
     <li class="nav-item">
-        <a class="nav-link" href="\AnimalsAdmin">Create a animal</a>
+        <a class="nav-link" href="/animalsadmin">Create a animal</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/alluser">All user</a>
     </li>
 @endif
 @endauth

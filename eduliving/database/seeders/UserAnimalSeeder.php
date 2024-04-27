@@ -1,8 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-
 use App\Models\User_Animal;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -13,9 +14,22 @@ class UserAnimalSeeder extends Seeder
      */
     public function run(): void
     {
-        User_Animal::create([
-            'user_id' => '1',
-            'animal_id'=> '1'
+
+
+        DB::table('user__animals')->insert([
+            'user_id' => 1,
+            'animal_id' => 3,
+        ]);
+
+        DB::table('user__animals')->insert([
+            'user_id' => 1,
+            'animal_id' => 2,
+            
+        ]);
+
+        DB::table('user__animals')->insert([
+            'user_id' => 2,
+            'animal_id' => 3,
         ]);
     }
 }

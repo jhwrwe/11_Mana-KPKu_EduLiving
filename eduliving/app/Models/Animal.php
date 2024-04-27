@@ -21,10 +21,15 @@ class Animal extends Model
         'description',
     ];
 
-    public function user() : BelongsTo {
+    public function user(){
 
         return $this->belongsTo(User::class);
     }
+
+    public function species() {
+        return $this->belongsTo(Species::class);
+    }
+   
 
 //     public function animal_quiz() : HasMany {
 

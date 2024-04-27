@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -35,6 +36,9 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function userAnimal() {
+        return $this->hasMany(User_Animal::class);
+    }
     /**
      * Get the attributes that should be cast.
      *
@@ -59,4 +63,8 @@ public function isUser(): bool{
 }
 return false;
 }
+public function role(){
+    return $this->belongsTo(Role::class);
 }
+}
+
