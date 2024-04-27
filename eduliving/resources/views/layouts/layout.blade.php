@@ -10,11 +10,11 @@
     <nav class="bg-white dark:bg-lime-800 fixed w-full z-20 top-0 start-0 border-b border-lime-800 dark:border-lime-800">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/images/Logo.png" class="h-12" alt="EduLiving">
+            <img src="/images/zoo_logo.png" class="h-20" alt="EduLiving">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EduLiving</span>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-             <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-lime-800 rounded-lg md:hidden hover:bg-lime-800 focus:outline-none focus:ring-2 focus:ring-lime-800 dark:text-lime-800 dark:hover:bg-lime-800 dark:focus:ring-lime-800" aria-controls="navbar-sticky" aria-expanded="false">
+             <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-800 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:text-gray-800 dark:hover:bg-gray-800 dark:focus:ring-gray-800" aria-controls="navbar-sticky" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -49,46 +49,26 @@
     @yield('layout_content')
 
 
-<footer class="bg-white dark:bg-gray-900">
+<footer class="bg-white dark:bg-lime-800">
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <h2 class="mb-6 text-sm font-semibold text-amber-900 uppercase dark:text-white">Contact us</h2>
+            <ul class="text-amber-500 dark:text-amber-400 font-medium">
                 <li class="mb-4">
-                    <a href="#" class=" hover:underline">About</a>
+                    <a href="#" class=" hover:underline">(031)5678703</a>
                 </li>
                 <li class="mb-4">
-                    <a href="#" class="hover:underline">Careers</a>
+                    <a href="#" class="hover:underline">@kebunbinatangsurabaya</a>
+
                 </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Brand Center</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Blog</a>
-                </li>
+
             </ul>
         </div>
+
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Discord Server</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Twitter</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Facebook</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <h2 class="mb-6 text-sm font-semibold text-amber-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-amber-500 dark:text-amber-400 font-medium">
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
@@ -100,26 +80,9 @@
                 </li>
             </ul>
         </div>
-        <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">iOS</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Android</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Windows</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">MacOS</a>
-                </li>
-            </ul>
-        </div>
     </div>
     <div class="w-full px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">MarketplaceGuru™</a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2024 Hackathon <a href="https://flowbite.com/">EduLiving™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
