@@ -19,6 +19,7 @@ Route::get('/gacha/{species}', [App\Http\Controllers\UserAnimalController::class
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/homecopy', [App\Http\Controllers\HomeController::class, 'index2'])->name('homecopy')->middleware('auth');
 Route::view('/welcome', 'welcome')->middleware('auth')->name('welcome');
+Route::get('/admin.home', [App\Http\Controllers\HomeController::class, 'indexforadmin'])->name('homeforadmin')->middleware('auth');
 Route::get('/animalsadmin', [App\Http\Controllers\AnimalController::class, 'index']);
 Route::get('/adminanimals', [App\Http\Controllers\AnimalController::class, 'AllAnimals']);
 Route::get('/adminuser', [App\Http\Controllers\HomeController::class, 'seeuser']);

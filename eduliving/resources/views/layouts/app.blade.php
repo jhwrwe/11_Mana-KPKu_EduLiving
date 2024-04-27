@@ -217,13 +217,12 @@
                     <ul class="navbar-nav ms-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link text-light"
-                                    href="\">Home</a>
+                                <a class="nav-link text-light" href="\home">Home</a>
                             </li>
                             @if (Route::has('login'))
-<li class="nav-item">
+                                <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                                </li>
                             @endif
 
                             @if (Route::has('register'))
@@ -251,33 +250,33 @@
                                     </form>
                                 </div>
                             </li>
-    @if (Auth::user()->isUser())
-        <li class="nav-item">
-            <a class="nav-link" href="\Find">Find</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="\Animals">Animals</a>
-        </li>
-    @endif
-    @if (Auth::user()->isAdmin())
-    <li class="nav-item">
-        <a class="nav-link" href="/adminhome">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/animalsadmin">animals</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/adminuser">All user</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/adminanimals">All Animal</a>
-    </li>
-@endif
-@endauth
-
+                            @if (Auth::user()->isUser())
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="\home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="\Find">Find</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="\Animals">Animals</a>
+                                </li>
+                            @endif
+                            @if (Auth::user()->isAdmin())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/adminhome">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/animalsadmin">animals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/adminuser">All user</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/adminanimals">All Animal</a>
+                                </li>
+                            @endif
+                        @endauth
                     </ul>
-
-
                     </ul>
                 </div>
             </div>

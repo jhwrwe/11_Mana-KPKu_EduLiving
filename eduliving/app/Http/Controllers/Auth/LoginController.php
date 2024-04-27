@@ -55,10 +55,10 @@ class LoginController extends Controller
 
         if(Auth::attempt($Admin)){
             $this->isLogin(Auth::id());
-            return redirect()->route('/home');
+            return redirect()->route('homeforadmin');
         }else if(Auth::attempt($User)){
             $this->isLogin(Auth::id());
-            return redirect()->route('/home');
+            return redirect()->route('home');
         }
     return redirect()->route('login');
     }
