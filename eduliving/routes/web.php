@@ -11,7 +11,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::get('/animals', [App\Http\Controllers\AnimalController::class, 'index']);
+Route::get('/gacha/{species}', [App\Http\Controllers\UserAnimalController::class, 'gachaAnimal']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/homecopy', [App\Http\Controllers\HomeController::class, 'index2'])->name('homecopy')->middleware('auth');
 Route::view('/welcome', 'welcome')->middleware('auth')->name('welcome');
 Route::get('/animalsadmin', [App\Http\Controllers\AnimalController::class, 'index']);
 Route::get('/adminuser', [App\Http\Controllers\HomeController::class, 'seeuser']);

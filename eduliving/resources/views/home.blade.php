@@ -7,4 +7,23 @@
         </div>
     </div>
 </div> --}}
+<div class="container-fluid p-0 ">
+    <div class="image-container"></div>
+</div>
+
+<div class="circle-button1">
+    <a href="https://example.com">Go</a>
+</div>
+
+<div class="circle-button2">
+    <a href="https://example.com">Go</a>
+</div>
+
+<div class="circle-button3">
+    <a href="https://example.com">Go</a>
+</div>
+
+<div class="circle-button4">
+    <a href="https://example.com">Go</a>
+</div>
 @endsection

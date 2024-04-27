@@ -15,7 +15,7 @@ class SpeciesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('specieses')->insert([
+        DB::table('species')->insert([
             ['species_name' => 'Mamalia'],
             ['species_name' => 'Aves'],
             ['species_name' => 'Pisces'],
