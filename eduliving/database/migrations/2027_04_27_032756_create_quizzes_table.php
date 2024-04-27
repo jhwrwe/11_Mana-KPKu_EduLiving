@@ -19,6 +19,9 @@ return new class extends Migration
             $table->text('false_answer_1')->nullable(false);
             $table->text('false_answer_2')->nullable(false);
             $table->text('false_answer_3')->nullable(false);
+            $table->unsignedBigInteger('species_id');
+            $table->foreign('species_id')->references('id')->on('specieses')->onDelete('cascade');
+
         });
     }
 
