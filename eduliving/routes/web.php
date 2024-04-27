@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\AnimalController;
@@ -24,3 +26,5 @@ Route::get('/adminhome', [App\Http\Controllers\HomeController::class, 'adminhome
 Route::post('/quiz/check', [QuizController::class, 'check'])->name('quiz.check');
 Route::get('/Find', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
 Route::get('/Find/{id}', [App\Http\Controllers\QuizController::class, 'index']);
+Route::get('\Animals', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
+Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 'showgaleri'])->middleware('auth');
