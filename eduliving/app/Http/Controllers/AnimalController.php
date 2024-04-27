@@ -57,4 +57,46 @@ class AnimalController extends Controller
         return view('admin.view_allanimals', compact('animalls'));
     }
 
+    public function create(){
+        $animals = Animal::all();
+        return view('admin.createanimal', compact('animals'));
+    }
+    public function store(Request $request){
+        $validateData=$request->validate([
+            'animal_name'=>'required|max:255',
+            'photo'=>'image',
+            'latin_name'=> 'required|string',
+            'species_id'=>'required|integer',
+            'habitat'=>'required|string',
+            'continent'=>'required|string',
+            'description'=>'required|string',
+
+
+        ]);
+        if($request->file('photo')){
+            $validateData['photo'] =$request->file('photo')->store('images',['disk' => 'public']);
+            Animal::create([
+                'animal_name'=> $validateData['animal_name'],
+                'image'=>  $validateData['photo'],
+                'latin_name'=> $validateData['latin_name'],
+                'species_id'=> $validateData['species_id'],
+                'habitat'=> $validateData['habitat'],
+                'continent'=> $validateData['continent'],
+                'description'=> $validateData['description'],
+
+            ]);
+        }else{
+            Animal::create([
+                'animal_name'=> $validateData['animal_name'],
+                'latin_name'=> $validateData['latin_name'],
+                'species_id'=> $validateData['species_id'],
+                'habitat'=> $validateData['habitat'],
+                'continent'=> $validateData['continent'],
+                'description'=> $validateData['description'],
+                'image'=>'photo',
+            ]);
+        }
+        return redirect()->route('seeallanminalss');
+    }
+
 }
