@@ -259,7 +259,7 @@
                                     <a class="nav-link text-light" href="\Find">Find</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="\Animals">Animals</a>
+                                    <a class="nav-link text-light" href="/animals">Animals</a>
                                 </li>
                             @endif
                             @if (Auth::user()->isAdmin())
