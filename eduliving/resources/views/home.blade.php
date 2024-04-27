@@ -59,19 +59,19 @@
                                         </a>
                                     </td>
                                     <td class=" p-1">
-                                        <a href="galeri/Aves">
+                                        <a href="galeri/Pisces">
                                         <img src="https://th.bing.com/th/id/OIG4.U7ezvegrZMU81JmuFrXp?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                         </a>
                                     </td>
                                     <td class=" p-2">
-                                        <a href="galeri/Pisces">
+                                        <a href="galeri/Reptilia">
                                         <img src="https://th.bing.com/th/id/OIG2.BM5OxrCdnjwZ7umn4y0O?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                         </a>
                                     </td>
                                     <td class=" p-2">
-                                        <a href="galeri/Reptilia">
+                                        <a href="galeri/Aves">
                                         <img src="https://th.bing.com/th/id/OIG4.vY9YnLy1NgLBjvk5TdWv?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                         </a>
@@ -132,19 +132,19 @@
                     </a>
                 </td>
                 <td class=" p-1">
-                    <a href="galeri/Aves">
+                    <a href="galeri/Pisces">
                     <img src="https://th.bing.com/th/id/OIG4.U7ezvegrZMU81JmuFrXp?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                     </a>
                 </td>
                 <td class=" p-2">
-                    <a href="galeri/Pisces">
+                    <a href="galeri/Reptilia">
                     <img src="https://th.bing.com/th/id/OIG2.BM5OxrCdnjwZ7umn4y0O?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                     </a>
                 </td>
                 <td class=" p-2">
-                    <a href="galeri/Reptilia">
+                    <a href="galeri/Aves">
                     <img src="https://th.bing.com/th/id/OIG4.vY9YnLy1NgLBjvk5TdWv?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                     </a>
