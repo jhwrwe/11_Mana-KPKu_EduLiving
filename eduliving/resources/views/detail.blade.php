@@ -1,29 +1,51 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Detail Animal</div>
-                    @foreach ($animal as $eada)
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="{{ asset('storage/' . $animal->image) }}" alt="{{ $animal->animal_name }}"
-                                 class="img-fluid" style="max-height: 300px;">
+    <div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card bg-light" style="border: 2px solid #4CAF50;">
+                <div class="card-header bg-light text-black">
+                    <h2 class="text-center">{{ $animal->animal_name }}</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="/images/{{$animal->image}}" alt="{{ $animal->animal_name }}"
+                                class="img-fluid" style="min-width: 200px; min-height: 200px; width: 100%;">
                         </div>
-
-                        <div class="mb-3">
-                            <h2>{{ $eada->animal_name }}</h2>
-                            <p><strong>Latin Name:</strong> {{ $as->latin_name }}</p>
-                            <p><strong>Species:</strong> {{ $as->species->species_name }}</p>
-                            <p><strong>Habitat:</strong> {{ $as->habitat }}</p>
-                            <p><strong>Continent:</strong> {{ $as->continent }}</p>
-                            <p><strong>Description:</strong> {{ $as->description }}</p>
+                        <div class="col-md-6">
+                            <p class="lead">Latin name: {{$animal->latin_name}}</p>
+                            <p class="lead">Species:
+                                @if ($animal->species_id == 1)
+                                    Mamalia
+                                @elseif ($animal->species_id == 2)
+                                    Aves
+                                @elseif ($animal->species_id == 3)
+                                    Pisces
+                                @else
+                                    Reptillia
+                                @endif
+                            </p>
+                            <p class="lead">Habitat: {{$animal->habitat}}</p>
+                            <p class="lead">Continent: {{$animal->continent}}</p>
+                            <p class="lead">Description: {{$animal->description}}</p>
+                            <div class="mt-4 text-left">
+                                @if ($animal->species_id == 1)
+                                <a href="{{ route('gallery.species', ['species' => "Mamalia"]) }}" class="btn btn-primary bg-dark">Back</a>
+                                @elseif ($animal->species_id == 2)
+                                <a href="{{ route('gallery.species', ['species' => "Aves"]) }}" class="btn btn-primary bg-dark">Back</a>
+                                @elseif ($animal->species_id == 3)
+                                <a href="{{ route('gallery.species', ['species' => "Pisces"]) }}" class="btn btn-primary bg-dark">Back</a>
+                                @else
+                                <a href="{{ route('gallery.species', ['species' => "Reptilia"]) }}" class="btn btn-primary bg-dark">Back</a>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 @endsection

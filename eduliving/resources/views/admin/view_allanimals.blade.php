@@ -19,7 +19,7 @@
                 @foreach($animalls as $user_animal)
                 <tr>
                     <td>{{ $user_animal->animal_name }}</td>
-                    {{-- <td><img src="{{ asset('storage/'.$user_animal->animal->image) }}" alt="{{ $user_animal->animal->animal_name }}" style="max-width: 100px;"></td> --}}
+                    <td><img src="{{ asset('storage/'.$user_animal->animal->image) }}" alt="{{ $user_animal->animal->animal_name }}" style="max-width: 100px;"></td>
                     <td>{{ $user_animal->latin_name  }}</td>
                     {{-- <td>{{ $user_animal->animal->species->species_name }}</td> --}}
                     <td>{{ $user_animal->habitat }}</td>

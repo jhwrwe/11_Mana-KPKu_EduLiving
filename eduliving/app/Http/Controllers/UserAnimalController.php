@@ -6,6 +6,7 @@ use App\Http\Requests\StoreUser_AnimalRequest;
 use App\Http\Requests\UpdateUser_AnimalRequest;
 use App\Models\Species;
 use App\Models\User_Animal;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\Animal;
 
 class UserAnimalController extends Controller
@@ -32,7 +33,7 @@ class UserAnimalController extends Controller
             'animal_id' => $randomAnimal->id
         ]);
     
-        return view('/home');
+        return Redirect::to('/home');
     }
 
     /**
