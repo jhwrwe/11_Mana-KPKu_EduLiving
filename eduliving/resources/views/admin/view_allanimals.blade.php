@@ -13,7 +13,7 @@
             <thead>
                 <tr>
                     <th>Animal</th>
-                    {{-- <th>Image</th> --}}
+                    <th>Image</th>
                     <th>Latin Name</th>
                     <th>Habitat</th>
                     <th>Continent</th>
@@ -23,31 +23,36 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($animalls as $user_animal)
-                <tr>
-                    <td>{{ $user_animal->animal_name }}</td>
-                    <td>
-
-                    <img src="/images/{{ $user_animal->image }}" alt=" 1 Animal Image" style="max-width: 100px;">
-
-                    </td>
-
-                    <td>{{ $user_animal->latin_name  }}</td>
-                    {{-- <td>{{ $user_animal->animal->species->species_name }}</td> --}}
-                    <td>{{ $user_animal->habitat }}</td>
-                    <td>{{ $user_animal->continent }}</td>
-                    <td>{{ $user_animal->description }}</td>
-                    <td>{{ $user_animal->species_id }}</td> {{-- Tambahkan baris ini untuk menampilkan nama spesies --}}
-                    <td>
-                        <form action="{{ route('delete_animal', $user_animal) }}" method="POST">
-                            @method('delete')
-                            @csrf
-                            <button class="btn btn-danger" id="delete" name="delete">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-            @endforeach
+                @foreach ($animalls as $user_animal)
+                    <tr>
+                        <td>{{ $user_animal->animal_name }}</td>
+                        <td><img src="/images/{{ $user_animal->image }}" alt="no image" style="max-width: 100px;"></td>
+                        <td>{{ $user_animal->latin_name }}</td>
+                        {{-- <td>{{ $user_animal->species_name }}</td> --}}
+                        <td>{{ $user_animal->habitat }}</td>
+                        <td>{{ $user_animal->continent }}</td>
+                        <td>{{ $user_animal->description }}</td>
+                        <td>
+                            @if ($user_animal->species_id == 1)
+                                Mamalia
+                            @elseif ($user_animal->species_id == 2)
+                                Aves
+                            @elseif ($user_animal->species_id == 3)
+                                Pisces
+                            @else
+                                Reptillia
+                            @endif
+                        </td>
+                        <td>
+                            <form action="{{ route('delete_animal', $user_animal) }}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="btn btn-danger" id="delete" name="delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
-    @endsection
+@endsection

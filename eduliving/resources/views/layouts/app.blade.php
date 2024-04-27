@@ -51,9 +51,9 @@
         .circle-button1 {
             position: absolute;
             /* Absolute positioning */
-            top: 45%;
+            top: 80%;
             /* Position at the vertical center */
-            left: 50%;
+            left: 30%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -88,9 +88,9 @@
         .circle-button2 {
             position: absolute;
             /* Absolute positioning */
-            top: 90%;
+            top: 140%;
             /* Position at the vertical center */
-            left: 25%;
+            left: 30%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -125,9 +125,9 @@
         .circle-button3 {
             position: absolute;
             /* Absolute positioning */
-            top: 90%;
+            top: 80%;
             /* Position at the vertical center */
-            left: 75%;
+            left: 70%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -162,9 +162,9 @@
         .circle-button4 {
             position: absolute;
             /* Absolute positioning */
-            top: 118%;
+            top: 140%;
             /* Position at the vertical center */
-            left: 50%;
+            left: 70%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -256,24 +256,21 @@
                             </li>
                             @if (Auth::user()->isUser())
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="\Find">Find</a>
+                                    <a class="nav-link text-light" href="\Find">"Find"</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="/animals">Animals</a>
+                                    <a class="nav-link text-light" href="/animals">"Animals"</a>
                                 </li>
                             @endif
                             @if (Auth::user()->isAdmin())
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link text-light" href="/animalsadmin">"Animals"</a>
+                                </li> --}}
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="/adminhome">Home</a>
+                                    <a class="nav-link text-light" href="/adminuser">"All Users"</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="/animalsadmin">animals</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="/adminuser">All user</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="/adminanimals">All Animal</a>
+                                    <a class="nav-link text-light" href="/adminanimals">"All Animal"</a>
                                 </li>
                             @endif
                         @endauth
