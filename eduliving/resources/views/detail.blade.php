@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Detail Animal</div>
-            @foreach ($collection as $item)
+                    @foreach ($animal as $eada)
                     <div class="card-body">
                         <div class="mb-3">
                             <img src="{{ asset('storage/' . $animal->image) }}" alt="{{ $animal->animal_name }}"
@@ -13,14 +13,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <h2>{{ $animal->animal_name }}</h2>
-                            <p><strong>Latin Name:</strong> {{ $animal->latin_name }}</p>
-                            <p><strong>Species:</strong> {{ $animal->species->species_name }}</p>
-                            <p><strong>Habitat:</strong> {{ $animal->habitat }}</p>
-                            <p><strong>Continent:</strong> {{ $animal->continent }}</p>
-                            <p><strong>Description:</strong> {{ $animal->description }}</p>
+                            <h2>{{ $eada->animal_name }}</h2>
+                            <p><strong>Latin Name:</strong> {{ $as->latin_name }}</p>
+                            <p><strong>Species:</strong> {{ $as->species->species_name }}</p>
+                            <p><strong>Habitat:</strong> {{ $as->habitat }}</p>
+                            <p><strong>Continent:</strong> {{ $as->continent }}</p>
+                            <p><strong>Description:</strong> {{ $as->description }}</p>
                         </div>
-                        <!-- You can add more details here if needed -->
                     </div>
                     @endforeach
                 </div>
