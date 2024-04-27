@@ -9,11 +9,11 @@
     </div>
 
     <div class="circle-button2">
-        <a href="/Find/3">Pisces</a>
+        <a href="/Find/4">Reptil</a>
     </div>
 
     <div class="circle-button3">
-        <a href="/Find/4">Reptil</a>
+        <a href="/Find/3">Pieces</a>
     </div>
 
     <div class="circle-button4">
