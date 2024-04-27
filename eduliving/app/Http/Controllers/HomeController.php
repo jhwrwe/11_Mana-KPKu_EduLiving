@@ -29,6 +29,6 @@ class HomeController extends Controller
     public function seeuser()
     {
         $user = User::all();
-        return view('view_alluser', compact('user'));
+        return view('admin.view_alluser', compact('user'));
     }
 }

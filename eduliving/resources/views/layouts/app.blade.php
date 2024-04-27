@@ -85,6 +85,7 @@
         </li>
     @endif
     @if (Auth::user()->isAdmin())
+    
     <li class="nav-item">
         <a class="nav-link" href="/animalsadmin">Create a animal</a>
     </li>
