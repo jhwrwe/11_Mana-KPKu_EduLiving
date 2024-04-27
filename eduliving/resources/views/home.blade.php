@@ -7,19 +7,19 @@
 </div>
 
 <div class="circle-button1">
-    <a href="https://example.com">Go</a>
+    <a href="/Find/2">Avies</a>
 </div>
 
 <div class="circle-button2">
-    <a href="https://example.com">Go</a>
+    <a href="/Find/3">Pisces</a>
 </div>
 
 <div class="circle-button3">
-    <a href="https://example.com">Go</a>
+    <a href="/Find/4">Reptil</a>
 </div>
 
 <div class="circle-button4">
-    <a href="https://example.com">Go</a>
+    <a href="/Find/1">Mamal</a>
 </div>
 
 <div class="pt-24">

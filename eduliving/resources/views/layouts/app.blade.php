@@ -251,26 +251,26 @@
                                     </form>
                                 </div>
                             </li>
-    @if (Auth::user()->isUser())
-        <li class="nav-item">
-            <a class="nav-link" href="\Find">Find</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="\Animals">Animals</a>
-        </li>
-    @endif
-    @if (Auth::user()->isAdmin())
-    <li class="nav-item">
-        <a class="nav-link" href="/adminhome">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/animalsadmin">Create a animal</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/adminuser">All user</a>
-    </li>
-@endif
-@endauth
+                            @if (Auth::user()->isUser())
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="\Find">Find</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="\Animals">Animals</a>
+                                </li>
+                            @endif
+                            @if (Auth::user()->isAdmin())
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="/adminhome">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="/animalsadmin">Create a animal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="/adminuser">All user</a>
+                                </li>
+                            @endif
+                        @endauth
 
                     </ul>
 
