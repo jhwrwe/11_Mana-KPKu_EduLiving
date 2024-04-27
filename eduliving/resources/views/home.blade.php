@@ -9,7 +9,7 @@
     </div>
 
     <div class="circle-button2">
-        <a href="/Find/4">Reptil</a>
+        <a href="/Find/1">Mamal</a>
     </div>
 
     <div class="circle-button3">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="circle-button4">
-        <a href="/Find/1">Mamal</a>
+        <a href="/Find/4">Reptil</a>
     </div>
 
     <div class="pt-24">
