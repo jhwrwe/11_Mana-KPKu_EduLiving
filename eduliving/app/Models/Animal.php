@@ -15,7 +15,7 @@ class Animal extends Model
         'animal_name',
         'image',
         'latin_name',
-        'species',
+        'species_id',
         'habitat',
         'continent',
         'description',
@@ -29,5 +29,6 @@ class Animal extends Model
     public function animal_quiz() : HasMany {
 
         return $this->HasMany(AnimalQuiz::class);
-    }
+
+}
 }
