@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('user_animals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('animal_id');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('animal_id')->constrained()->onDelete('cascade');
+            // $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('animal_id');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('animal_id')->references('id')->on('animals')->onDelete('cascade');
             $table->timestamps();
         });
     }
