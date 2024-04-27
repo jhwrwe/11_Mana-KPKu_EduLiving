@@ -51,9 +51,9 @@
         .circle-button1 {
             position: absolute;
             /* Absolute positioning */
-            top: 80%;
+            top: 45%;
             /* Position at the vertical center */
-            left: 30%;
+            left: 50%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -88,9 +88,9 @@
         .circle-button2 {
             position: absolute;
             /* Absolute positioning */
-            top: 140%;
+            top: 90%;
             /* Position at the vertical center */
-            left: 30%;
+            left: 25%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -125,9 +125,9 @@
         .circle-button3 {
             position: absolute;
             /* Absolute positioning */
-            top: 80%;
+            top: 90%;
             /* Position at the vertical center */
-            left: 70%;
+            left: 75%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -162,9 +162,9 @@
         .circle-button4 {
             position: absolute;
             /* Absolute positioning */
-            top: 140%;
+            top: 118%;
             /* Position at the vertical center */
-            left: 70%;
+            left: 50%;
             /* Position at the horizontal center */
             transform: translate(-50%, -50%);
             /* Center the button */
@@ -195,6 +195,11 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        footer {
+            background-color: rgb(44, 86, 0);  /* Change this to your desired color */
+            padding: 2rem 0;  /* Add padding for spacing */
+        }
     </style>
 
 <body>
@@ -217,12 +222,13 @@
                     <ul class="navbar-nav ms-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="\home">Home</a>
+                                <a class="nav-link text-light"
+                                    href="\">Home</a>
                             </li>
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                            <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                            </li>
                             @endif
 
                             @if (Route::has('register'))
@@ -252,27 +258,28 @@
                             </li>
                             @if (Auth::user()->isUser())
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="\home">Home</a>
+                                    <a class="nav-link text-light" href="\Find">Find</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Animals">Animals</a>
+                                    <a class="nav-link text-light" href="\Animals">Animals</a>
                                 </li>
                             @endif
                             @if (Auth::user()->isAdmin())
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/adminhome">Home</a>
+                                    <a class="nav-link text-light" href="/adminhome">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/animalsadmin">animals</a>
+                                    <a class="nav-link text-light" href="/animalsadmin">animals</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/adminuser">All user</a>
+                                    <a class="nav-link text-light" href="/adminuser">All user</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/adminanimals">All Animal</a>
+                                    <a class="nav-link text-light" href="/adminanimals">All Animal</a>
                                 </li>
                             @endif
                         @endauth
+
                     </ul>
                     </ul>
                 </div>
@@ -282,6 +289,36 @@
 
     </div>
     @yield('content')
+
+    <footer class="bg-gray-400 dark:bg-gray-900 py-8">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="md:text-left">
+                    <h2 class="text-lg font-semibold text-white mb-4">Tentang Kami</h2>
+                    <p class="text-white dark:text-gray-300">Kebun Binatang Surabaya merupakan tempat yang menyediakan pengalaman unik dan mendidik tentang keanekaragaman hayati.</p>
+                </div>
+                <div class="md:text-left">
+                    <h2 class="text-lg font-semibold text-white mb-4">Kontak</h2>
+                    <ul class="text-gray-400 dark:text-gray-300">
+                        <li class="mb-2"><a href="mailto:michaeldavidsin@gmail.com" class="text-white">michaeldavidsin@gmail.com</a></li>
+                        <li class="mb-2"><a href="tel:0815912599" class="text-white">0815912599</a></li>
+                        <li class="text-white">Universitas Ciputra Surabaya</li>
+                    </ul>
+                </div>
+                <div class="md:text-left">
+                    <h2 class="text-lg font-semibold text-white mb-4">Legal</h2>
+                    <ul class="text-gray-400 dark:text-gray-300">
+                        <li class="mb-2"><a href="#" class="text-white hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white hover:underline">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-400 dark:border-gray-600">
+            <div class="text-left text-gray-400 dark:text-gray-300">
+                <p class="text-white">© 2024 <a href="https://flowbite.com/" class="text-white hover:underline">Edu Living</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
