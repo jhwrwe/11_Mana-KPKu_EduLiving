@@ -18,7 +18,7 @@ class AnimalSeeder extends Seeder
         DB::table('animals')->insert([
             [
                 'animal_name' => 'Harimau Sumatera',
-                'image' => 'harimau_sumatera.jpg',
+                'image' => 'https://th.bing.com/th/id/OIG2.dbxAi_LIhR0fzAOFO3N1?pid=ImgGn',
                 'latin_name' => 'Panthera tigris sumatrae',
                 'species_id' => 1,
                 'habitat' => 'Hutan Tropis',

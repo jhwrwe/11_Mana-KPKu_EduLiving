@@ -53,19 +53,19 @@
                                 </tr>
                                 <tr>
                                     <td class="d-none d-sm-table-cell p-1">
-                                        <img src="https://images.pexels.com/photos/5710791/pexels-photo-5710791.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        <img src="https://th.bing.com/th/id/OIG2.dbxAi_LIhR0fzAOFO3N1?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                     </td>
                                     <td class=" p-1">
-                                        <img src="https://images.pexels.com/photos/3846033/pexels-photo-3846033.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        <img src="https://th.bing.com/th/id/OIG4.U7ezvegrZMU81JmuFrXp?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                     </td>
                                     <td class=" p-1">
-                                        <img src="https://images.pexels.com/photos/3536424/pexels-photo-3536424.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        <img src="https://th.bing.com/th/id/OIG2.BM5OxrCdnjwZ7umn4y0O?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                     </td>
                                     <td class=" p-1">
-                                        <img src="https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        <img src="https://th.bing.com/th/id/OIG4.vY9YnLy1NgLBjvk5TdWv?pid=ImgGn"
                                             class="img-fluid rounded" alt="..."style="width: 2000px;">
                                     </td>
                                 </tr>
@@ -118,19 +118,19 @@
         <table class="my-5 mx-5">
             <tr>
                 <td class="d-none d-sm-table-cell p-2">
-                    <img src="https://images.pexels.com/photos/5710791/pexels-photo-5710791.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    <img src="https://th.bing.com/th/id/OIG2.dbxAi_LIhR0fzAOFO3N1?pid=ImgGn"
+                        class="img-fluid rounded" alt="..."style="width: 2000px;">
+                </td>
+                <td class=" p-1">
+                    <img src="https://th.bing.com/th/id/OIG4.U7ezvegrZMU81JmuFrXp?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                 </td>
                 <td class=" p-2">
-                    <img src="https://images.pexels.com/photos/3846033/pexels-photo-3846033.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    <img src="https://th.bing.com/th/id/OIG2.BM5OxrCdnjwZ7umn4y0O?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                 </td>
                 <td class=" p-2">
-                    <img src="https://images.pexels.com/photos/3536424/pexels-photo-3536424.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        class="img-fluid rounded" alt="..."style="width: 2000px;">
-                </td>
-                <td class=" p-2">
-                    <img src="https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    <img src="https://th.bing.com/th/id/OIG4.vY9YnLy1NgLBjvk5TdWv?pid=ImgGn"
                         class="img-fluid rounded" alt="..."style="width: 2000px;">
                 </td>
             </tr>
