@@ -12,6 +12,7 @@
                     <th>Continent</th>
                     <th>Description</th>
                     <th>Species</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +26,13 @@
                     <td>{{ $user_animal->continent }}</td>
                     <td>{{ $user_animal->description }}</td>
                     <td>{{ $user_animal->species_id }}</td> {{-- Tambahkan baris ini untuk menampilkan nama spesies --}}
+                    <td>
+                        <form action="{{ route('delete_animal', $user_animal) }}" method="POST">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger" id="delete" name="delete">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

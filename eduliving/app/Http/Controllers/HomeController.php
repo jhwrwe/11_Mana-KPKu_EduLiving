@@ -40,5 +40,10 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
+    public function delete(User $user){
+        $user->delete();
+        $users = User::all();
+        return view('admin.view_alluser',compact('users'));
+    }
 
 }

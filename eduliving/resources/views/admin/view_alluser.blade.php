@@ -9,6 +9,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,17 @@
                     <td>{{ $u->name }}</td>
                     <td>{{ $u->email }}</td>
                     <td>{{ $u->role->role_name }}</td>
+                    <td>
+                        @if ($u->role->role_name == "Admin")
+                        @else
+                        <form action="{{ route('delete_user', $u) }}" method="POST">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger" id="delete" name="delete">Delete</button>
+                        </form>
+                        @endif
+
+                    </td>
                 </tr>
             @endforeach
         </tbody>

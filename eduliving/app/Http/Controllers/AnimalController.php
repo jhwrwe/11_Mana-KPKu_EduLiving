@@ -29,6 +29,11 @@ class AnimalController extends Controller
         $user_animals = User_Animal::where('user_id', $user_id)->get();
          return view('galeri', compact('user_animals'));
     }
+    public function delete(Animal $animal){
+        $animal->delete();
+        $animalls = Animal::all();
+        return view('admin.view_allanimals',compact('animalls'));
+    }
 }
 
 
