@@ -210,7 +210,9 @@
                 <a class="navbar-brand" href="#">
                     <img src="/images/zoo_logo.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
                 </a>
-                <h3 class="text-light mt-0 mb-0">EduLiving</h3>
+                <a href="/home" style="text-decoration: none; color: inherit;">
+                    <h3 class="text-light mt-0 mb-0">EduLiving</h3>
+                </a>
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -221,10 +223,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link text-light"
-                                    href="\">Home</a>
-                            </li>
                             @if (Route::has('login'))
                             <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>

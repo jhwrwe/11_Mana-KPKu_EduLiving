@@ -8,8 +8,8 @@ use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\RouterContr;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('zero')->middleware('auth');;
 
 Auth::routes();
 
