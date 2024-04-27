@@ -32,4 +32,4 @@ Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 's
 Route::delete('/animal_destroy/{animal}',[AnimalController::class,'delete'])->middleware('auth')->name('delete_animal');
 Route::delete('/user_destroy/{user}',[HomeController::class,'delete'])->middleware('auth')->name('delete_user');
 Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 'gallery'])->name('gallery.species')->middleware('auth');
-Route::get('/galeri/{id}', [App\Http\Controllers\AnimalController::class, 'detail'])->name('detail');
+Route::get('/animalDetail/{id}', [App\Http\Controllers\AnimalController::class, 'detail'])->name('detail');
