@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{ $animal->image }}" alt="{{ $animal->animal_name }}"
+                            <img src="/images/{{$animal->image}}" alt="{{ $animal->animal_name }}"
                                 class="img-fluid" style="min-width: 200px; min-height: 200px; width: 100%;">
                         </div>
                         <div class="col-md-6">
