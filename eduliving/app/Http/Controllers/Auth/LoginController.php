@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -36,4 +40,35 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function login(Request $request){
+        $Admin=[
+            'email'=> $request->email,
+            'password'=> $request->password,
+            'role_id'=>1,
+        ];
+
+        $User=[
+            'email'=> $request->email,
+            'password'=> $request->password,
+            'role_id'=>2,
+        ];
+
+        if(Auth::attempt($Admin)){
+            $this->isLogin(Auth::id());
+            return redirect()->route('/');
+        }else if(Auth::attempt($User)){
+            $this->isLogin(Auth::id());
+            return redirect()->route('/');
+        }
+    return redirect()->route('login');
+    }
+     public function isLogin(int $id){
+        $user = User::findOrFail($id);
+        }
+
+        public function logout(Request $request){
+            $user = User::findOrFail(Auth::id());
+            $request->session()->invalidate();
+            return $this->loggedOut($request) ?: redirect('login');
+        }
 }

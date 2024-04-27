@@ -15,7 +15,6 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -70,6 +69,17 @@
                                 </div>
                             </li>
                         @endguest
+                        @auth
+    @if (Auth::user()->isAdmin())
+        <li class="nav-item">
+            <a class="nav-link" href="Find">Find</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Animals">Animals</a>
+        </li>
+    @endif
+@endauth
+
                     </ul>
 
 
@@ -82,5 +92,13 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdownTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+            var dropdownList = dropdownTriggerList.map(function (dropdownTriggerEl) {
+                return new bootstrap.Dropdown(dropdownTriggerEl);
+            });
+        });
+    </script>
 </body>
 </html>
