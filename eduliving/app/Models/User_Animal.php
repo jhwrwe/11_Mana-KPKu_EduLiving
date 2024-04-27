@@ -16,12 +16,12 @@ class User_Animal extends Model
         'animal_id'
     ];
 
-    public function animal() : BelongsTo {
+    public function animal(){
 
         return $this->belongsTo(Animal::class);
     }
 
-    public function user() : BelongsTo {
+    public function user(){
 
         return $this->belongsTo(User::class);
     }

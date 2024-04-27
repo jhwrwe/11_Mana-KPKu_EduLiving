@@ -16,18 +16,18 @@ class UserAnimalSeeder extends Seeder
     {
 
 
-        DB::table('user_animals')->insert([
+        DB::table('user__animals')->insert([
             'user_id' => 1,
             'animal_id' => 3,
         ]);
 
-        DB::table('user_animals')->insert([
+        DB::table('user__animals')->insert([
             'user_id' => 1,
             'animal_id' => 2,
             
         ]);
 
-        DB::table('user_animals')->insert([
+        DB::table('user__animals')->insert([
             'user_id' => 2,
             'animal_id' => 3,
         ]);

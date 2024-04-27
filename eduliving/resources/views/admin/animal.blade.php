@@ -1,22 +1,23 @@
+<!-- resources/views/animals/index.blade.php -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Animals</title>
+    <title>Your Animals</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
-        <h1>List of Animals</h1>
+        <h1>Your Animals</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>Animal Name</th>
-                    <th>Image</th>
+                    {{-- <th>Image</th> --}}
                     <th>Latin Name</th>
-                    <th>Species</th>
+                    {{-- <th>Species</th> --}}
                     <th>Habitat</th>
                     <th>Continent</th>
                     <th>Description</th>
@@ -26,14 +27,15 @@
                 @foreach($animals as $animal)
                 <tr>
                     <td>{{ $animal->animal_name }}</td>
-                    <td><img src="{{ asset('storage/'.$animal->image) }}" alt="{{ $animal->animal_name }}" style="max-width: 100px;"></td>
+                    {{-- <td><img src="{{ asset('storage/'.$animal->image) }}" alt="{{ $animal->animal_name }}" style="max-width: 100px;"></td> --}}
                     <td>{{ $animal->latin_name }}</td>
-                    <td>{{ $animal->species }}</td>
+                    <td>{{ $animal->species_id}}</td>
                     <td>{{ $animal->habitat }}</td>
                     <td>{{ $animal->continent }}</td>
                     <td>{{ $animal->description }}</td>
+{{-- Tambahkan baris ini untuk menampilkan nama spesies --}}
                 </tr>
-                @endforeach
+            @endforeach
             </tbody>
         </table>
     </div>
