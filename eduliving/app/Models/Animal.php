@@ -21,7 +21,7 @@ class Animal extends Model
         'description',
     ];
 
-    public function user() : BelongsTo {
+    public function user(){
 
         return $this->belongsTo(User::class);
     }

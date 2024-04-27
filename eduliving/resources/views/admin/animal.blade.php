@@ -17,23 +17,24 @@
                     <th>Animal Name</th>
                     {{-- <th>Image</th> --}}
                     <th>Latin Name</th>
-                    {{-- <th>Species</th> --}}
                     <th>Habitat</th>
                     <th>Continent</th>
                     <th>Description</th>
+                    <th>Species</th>
+
                 </tr>
             </thead>
             <tbody>
-                @foreach($animals as $animal)
+                @foreach($user_animals as $user_animal)
                 <tr>
-                    <td>{{ $animal->animal_name }}</td>
-                    {{-- <td><img src="{{ asset('storage/'.$animal->image) }}" alt="{{ $animal->animal_name }}" style="max-width: 100px;"></td> --}}
-                    <td>{{ $animal->latin_name }}</td>
-                    <td>{{ $animal->species_id}}</td>
-                    <td>{{ $animal->habitat }}</td>
-                    <td>{{ $animal->continent }}</td>
-                    <td>{{ $animal->description }}</td>
-{{-- Tambahkan baris ini untuk menampilkan nama spesies --}}
+                    <td>{{ $user_animal->animal->animal_name }}</td>
+                    {{-- <td><img src="{{ asset('storage/'.$user_animal->animal->image) }}" alt="{{ $user_animal->animal->animal_name }}" style="max-width: 100px;"></td> --}}
+                    <td>{{ $user_animal->animal->latin_name }}</td>
+                    {{-- <td>{{ $user_animal->animal->species->species_name }}</td> --}}
+                    <td>{{ $user_animal->animal->habitat }}</td>
+                    <td>{{ $user_animal->animal->continent }}</td>
+                    <td>{{ $user_animal->animal->description }}</td>
+                    <td>{{ $user_animal->animal->species_id }}</td> {{-- Tambahkan baris ini untuk menampilkan nama spesies --}}
                 </tr>
             @endforeach
             </tbody>

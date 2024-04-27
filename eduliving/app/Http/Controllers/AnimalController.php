@@ -19,10 +19,9 @@ class AnimalController extends Controller
     // Ambil semua hewan yang dimiliki oleh pengguna yang sedang diautentikasi
     $user_animals = User_Animal::where('user_id', $user_id)->get();
     
-        $user_animals->load('animal');
-    $animals = $user_animals->animal;
+      
 
-    return view('admin.animal', compact('animals'));
+    return view('admin.animal', compact('user_animals'));
     }
     
 
