@@ -24,3 +24,4 @@ Route::post('/quiz/check', [QuizController::class, 'check'])->name('quiz.check')
 Route::get('/Find', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
 Route::get('/Find/{id}', [App\Http\Controllers\QuizController::class, 'index']);
 Route::get('\Animals', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
+Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 'showgaleri'])->middleware('auth');

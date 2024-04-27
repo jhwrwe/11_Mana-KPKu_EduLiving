@@ -15,8 +15,14 @@ class AnimalController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        // Ambil semua hewan yang dimiliki oleh pengguna yang sedang diautentikasi
         $user_animals = User_Animal::where('user_id', $user_id)->get();
          return view('admin.animal', compact('user_animals'));
+    }
+
+    public function showgaleri()
+    {
+        $user_id = Auth::id();
+        $user_animals = User_Animal::where('user_id', $user_id)->get();
+         return view('galeri', compact('user_animals'));
     }
 }

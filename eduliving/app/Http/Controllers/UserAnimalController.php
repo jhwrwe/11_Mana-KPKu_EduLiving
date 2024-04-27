@@ -15,10 +15,8 @@ class UserAnimalController extends Controller
      */
     public function gachaAnimal($species)
     {
-        // Ambil ID spesies berdasarkan nama spesies yang diberikan
         $speciesId = Species::where('species_name', $species)->value('id');
     
-        // Ambil semua hewan berdasarkan spesies yang diberikan, dan pastikan bahwa pengguna belum memiliki hewan tersebut
         $animals = Animal::where('species_id', $speciesId)
                         ->whereNotIn('id', function ($query) {
                             $query->select('animal_id')
@@ -27,16 +25,13 @@ class UserAnimalController extends Controller
                         })
                         ->get();
     
-        // Lakukan pengundian (gacha) untuk memilih satu hewan secara acak
         $randomAnimal = $animals->random();
     
-        // Tambahkan entri baru ke dalam tabel user_animals
         $userAnimal = User_Animal::create([
             'user_id' => Auth::id(),
             'animal_id' => $randomAnimal->id
         ]);
     
-        // Mengembalikan data hewan yang dipilih untuk menampilkan ke pengguna
         return $randomAnimal;
     }
 
