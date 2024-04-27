@@ -19,4 +19,9 @@ class AnimalController extends Controller
         $user_animals = User_Animal::where('user_id', $user_id)->get();
          return view('admin.animal', compact('user_animals'));
     }
+    public function AllAnimals()
+    {
+         $animalls = Animal::all();
+         return view('admin.view_allanimals', compact('animalls'));
+    }
 }

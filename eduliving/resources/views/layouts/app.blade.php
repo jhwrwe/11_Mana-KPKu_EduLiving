@@ -264,10 +264,13 @@
         <a class="nav-link" href="/adminhome">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/animalsadmin">Create a animal</a>
+        <a class="nav-link" href="/animalsadmin">animals</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="/adminuser">All user</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/adminanimals">All Animal</a>
     </li>
 @endif
 @endauth
