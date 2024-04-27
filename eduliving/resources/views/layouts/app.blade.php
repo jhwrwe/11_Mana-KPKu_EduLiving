@@ -77,15 +77,15 @@
                             </li>
     @if (Auth::user()->isUser())
         <li class="nav-item">
-            <a class="nav-link" href="Find">Find</a>
+            <a class="nav-link" href="\Find">Find</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Animals">Animals</a>
+            <a class="nav-link" href="\Animals">Animals</a>
         </li>
     @endif
     @if (Auth::user()->isAdmin())
     <li class="nav-item">
-        <a class="nav-link" href="AnimalsAdmin">Create a animal</a>
+        <a class="nav-link" href="\AnimalsAdmin">Create a animal</a>
     </li>
 @endif
 @endauth
