@@ -205,7 +205,9 @@
                 <a class="navbar-brand" href="#">
                     <img src="/images/zoo_logo.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
                 </a>
-                <h3 class="text-light mt-0 mb-0">EduLiving</h3>
+                <a href="/home" style="text-decoration: none; color: inherit;">
+                    <h3 class="text-light mt-0 mb-0">EduLiving</h3>
+                </a>
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -216,9 +218,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="\home">Home</a>
-                            </li>
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -250,31 +249,6 @@
                                     </form>
                                 </div>
                             </li>
-                            @if (Auth::user()->isUser())
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="\home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="\Find">Find</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="\Animals">Animals</a>
-                                </li>
-                            @endif
-                            @if (Auth::user()->isAdmin())
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/adminhome">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/animalsadmin">animals</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/adminuser">All user</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/adminanimals">All Animal</a>
-                                </li>
-                            @endif
                         @endauth
                     </ul>
                     </ul>
