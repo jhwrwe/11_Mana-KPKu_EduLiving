@@ -18,8 +18,8 @@ class Quiz extends Model
         'false_answer_3',
     ];
 
-    public function animal_quiz() : HasMany {
+    // public function animal_quiz() : HasMany {
 
-        return $this->HasMany(AnimalQuiz::class);
-    }
+    //     return $this->HasMany(AnimalQuiz::class);
+    // }
 }

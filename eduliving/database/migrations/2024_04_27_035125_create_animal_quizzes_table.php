@@ -9,21 +9,25 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('animal_quizzes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->foreignId('animals_id')->constrained('animals');
-            $table->foreignId('quizzes_id')->constrained('quizzes');
-        });
-    }
+    // public function up(): void
+    // {
+    //     Schema::create('animal_quizzes', function (Blueprint $table) {
+    //         $table->id();
+    //         $table->timestamps();
+    //         $table->unsignedBigInteger('animals');
+    //         $table->foreign('animal_id')->references('id')->on('animals')->onDelete('cascade');
+    //         $table->unsignedBigInteger('quizzes_id');
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('animal_quizzes');
-    }
+    //         $table->foreign('quizzes_id')->references('id')->on('quizzes')->onDelete('cascade');
+
+    //     });
+    // }
+
+    // /**
+    //  * Reverse the migrations.
+    //  */
+    // public function down(): void
+    // {
+    //     Schema::dropIfExists('animal_quizzes');
+    // }
 };

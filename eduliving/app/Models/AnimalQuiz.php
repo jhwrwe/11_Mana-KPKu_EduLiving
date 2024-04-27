@@ -10,13 +10,13 @@ class AnimalQuiz extends Model
 {
     use HasFactory;
 
-    public function animal() : BelongsTo {
+    // public function animal() : BelongsTo {
 
-        return $this->BelongsTo(Animal::class);
-    }
+    //     return $this->BelongsTo(Animal::class);
+    // }
 
-    public function quiz() : BelongsTo {
+    // public function quiz() : BelongsTo {
 
-        return $this->belongsTo(Quiz::class);
-    }
+    //     return $this->belongsTo(Quiz::class);
+    // }
 }
