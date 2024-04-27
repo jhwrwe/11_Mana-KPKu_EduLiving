@@ -32,7 +32,7 @@ class UserAnimalController extends Controller
             'animal_id' => $randomAnimal->id
         ]);
     
-        return $randomAnimal;
+        return view('/home');
     }
 
     /**
