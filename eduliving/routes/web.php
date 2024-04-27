@@ -27,6 +27,7 @@ Route::post('/quiz/check', [QuizController::class, 'check'])->name('quiz.check')
 Route::get('/Find', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
 Route::get('/Find/{id}', [App\Http\Controllers\QuizController::class, 'index']);
 Route::get('\Animals', [App\Http\Controllers\AnimalController::class, 'index'])->middleware('User');
-Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 'showgaleri'])->middleware('auth');
 Route::delete('/animal_destroy/{animal}',[AnimalController::class,'delete'])->middleware('auth')->name('delete_animal');
 Route::delete('/user_destroy/{user}',[HomeController::class,'delete'])->middleware('auth')->name('delete_user');
+Route::get('/galeri/{species}',[App\Http\Controllers\AnimalController::class, 'gallery'])->name('gallery.species')->middleware('auth');
+Route::get('/galeri/{id}', [App\Http\Controllers\AnimalController::class, 'detail'])->name('detail');

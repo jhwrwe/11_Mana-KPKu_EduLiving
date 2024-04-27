@@ -9,11 +9,11 @@
         </div>
 
 
-    <form action="{{ route('quiz.check') }}" method="POST">
-        @csrf
-        <!-- Your form inputs and quiz questions go here -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <form action="{{ route('quiz.check') }}" method="POST">
+            @csrf
+            <!-- Your form inputs and quiz questions go here -->
+            <a href="/gacha/mamalia" class="btn btn-primary">Go to Galeri Mamalia</a>
+        </form>
 </div>
 @endsection
 
