@@ -255,10 +255,7 @@
                                     <a class="nav-link text-light" href="\home">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="\Find">Find</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="\Animals">Animals</a>
+                                    <a class="nav-link" href="/Animals">Animals</a>
                                 </li>
                             @endif
                             @if (Auth::user()->isAdmin())
