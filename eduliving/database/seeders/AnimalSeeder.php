@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 use App\Models\Animal;
 use App\Models\Species;
-
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,59 +14,72 @@ class AnimalSeeder extends Seeder
      */
     public function run()
     {
-        // Menentukan referensi ke spesies
-        
-        Animal::create([
-            'animal_name' => 'Tiger',
-            'image' => 'tiger.jpg',
-            'latin_name' => 'Panthera tigris',
-            'species_id' => 1, // ID spesies Mamalia
-            'habitat' => 'Forests and grasslands',
-            'continent' => 'Asia',
-            'description' => 'The tiger is the largest cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange-brown fur with a lighter underside.'
+
+        DB::table('animals')->insert([
+            [
+                'animal_name' => 'Harimau Sumatera',
+                'image' => 'harimau_sumatera.jpg',
+                'latin_name' => 'Panthera tigris sumatrae',
+                'species_id' => 1,
+                'habitat' => 'Hutan Tropis',
+                'continent' => 'Asia',
+                'description' => 'Harimau Sumatera adalah salah satu subspesies harimau yang habitatnya terutama di pulau Sumatera, Indonesia.'
+            ],
+            [
+                'animal_name' => 'Gajah Sumatera',
+                'image' => 'gajah_sumatera.jpg',
+                'latin_name' => 'Elephas maximus sumatranus',
+                'species_id' => 1,
+                'habitat' => 'Hutan Hujan Tropis',
+                'continent' => 'Asia',
+                'description' => 'Gajah Sumatera adalah salah satu subspesies gajah yang hidup di pulau Sumatera, Indonesia, dan terancam punah karena perburuan dan kerusakan habitat.'
+            ],
+            [
+                'animal_name' => 'Badak Jawa',
+                'image' => 'badak_jawa.jpg',
+                'latin_name' => 'Rhinoceros sondaicus',
+                'species_id' => 1,
+                'habitat' => 'Hutan Hujan Tropis',
+                'continent' => 'Asia',
+                'description' => 'Badak Jawa adalah spesies badak yang ditemukan di pulau Jawa, Indonesia, dan termasuk dalam kategori kritis terancam punah karena perburuan dan hilangnya habitat.'
+            ],
+            [
+                'animal_name' => 'Komodo',
+                'image' => 'komodo.jpg',
+                'latin_name' => 'Varanus komodoensis',
+                'species_id' => 4,
+                'habitat' => 'Pulau Kecil di Indonesia',
+                'continent' => 'Asia',
+                'description' => 'Komodo adalah spesies kadal terbesar yang hidup di Pulau Komodo dan beberapa pulau kecil di sekitarnya, Indonesia. Dikenal sebagai "naga komodo," spesies ini terancam punah karena perburuan dan kerusakan habitat.'
+            ],
+            [
+                'animal_name' => 'Orangutan',
+                'image' => 'orangutan.jpg',
+                'latin_name' => 'Pongo pygmaeus',
+                'species_id' => 1,
+                'habitat' => 'Hutan Hujan Tropis',
+                'continent' => 'Asia',
+                'description' => 'Orangutan adalah primata besar yang endemik di pulau Borneo dan Sumatera, Indonesia. Terancam punah karena perburuan, deforestasi, dan perdagangan ilegal.'
+            ],
+            [
+                'animal_name' => 'Elang Jawa',
+                'image' => 'elang_jawa.jpg',
+                'latin_name' => 'Nisaetus bartelsi',
+                'species_id' => 2,
+                'habitat' => 'Hutan Pegunungan',
+                'continent' => 'Asia',
+                'description' => 'Elang Jawa adalah spesies elang yang ditemukan di pulau Jawa, Indonesia. Terancam punah karena perburuan ilegal dan hilangnya habitat.'
+            ],
+            [
+                'animal_name' => 'Penyu Hijau',
+                'image' => 'penyu_hijau.jpg',
+                'latin_name' => 'Chelonia mydas',
+                'species_id' => 3,
+                'habitat' => 'Perairan Tropis dan Subtropis',
+                'continent' => 'Asia, Amerika, Eropa, Australia',
+                'description' => 'Penyu Hijau adalah spesies penyu laut yang dapat ditemukan di berbagai perairan tropis dan subtropis di seluruh dunia. Di Indonesia, penyu hijau ditemukan di perairan pantai dan pulau-pulau kecil, tetapi populasi mereka terancam oleh penangkapan telur dan hilangnya habitat pesisir.'
+            ],
         ]);
-        
-        Animal::create([
-            'animal_name' => 'Hawk',
-            'image' => 'hawk.jpg',
-            'latin_name' => 'Buteo buteo',
-            'species_id' => 2, // ID spesies Aves
-            'habitat' => 'Forests, grasslands, and urban areas',
-            'continent' => 'Worldwide',
-            'description' => 'The hawk is a bird of prey noted for its broad, rounded wings and a long tail, typically hunting small mammals and birds.'
-        ]);
-        
-        Animal::create([
-            'animal_name' => 'Salmon',
-            'image' => 'salmon.jpg',
-            'latin_name' => 'Salmo salar',
-            'species_id' => 3, // ID spesies Pisces
-            'habitat' => 'Freshwater and saltwater',
-            'continent' => 'North America and Europe',
-            'description' => 'The salmon is a fish species that migrates from freshwater to the ocean and back again to spawn. It is an important food source for humans and wildlife.'
-        ]);
-        
-        Animal::create([
-            'animal_name' => 'Python',
-            'image' => 'python.jpg',
-            'latin_name' => 'Pythonidae',
-            'species_id' => 4, // ID spesies Reptilia
-            'habitat' => 'Forests, grasslands, and deserts',
-            'continent' => 'Africa, Asia, and Australia',
-            'description' => 'The python is a large snake species known for its nonvenomous constricting method of prey capture. They are found in a variety of habitats across the world.'
-        ]);
-        
-        Animal::create([
-            'animal_name' => 'Elephant',
-            'image' => 'elephant.jpg',
-            'latin_name' => 'Loxodonta africana',
-            'species_id' => 1, // ID spesies Mamalia
-            'habitat' => 'Forests, savannas, and deserts',
-            'continent' => 'Africa and Asia',
-            'description' => 'The elephant is the largest land animal, characterized by its long trunk, large ears, and tusks. They play a crucial role in their ecosystems and are revered in many cultures.'
-        ]);
-        
-        // Tambahkan 3 data hewan lagi dengan atribut yang berbeda
-        
+
     }
 }
