@@ -5,12 +5,13 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Detail Animal</div>
-
+            @foreach ($collection as $item)
                     <div class="card-body">
                         <div class="mb-3">
                             <img src="{{ asset('storage/' . $animal->image) }}" alt="{{ $animal->animal_name }}"
                                  class="img-fluid" style="max-height: 300px;">
                         </div>
+
                         <div class="mb-3">
                             <h2>{{ $animal->animal_name }}</h2>
                             <p><strong>Latin Name:</strong> {{ $animal->latin_name }}</p>
@@ -21,6 +22,7 @@
                         </div>
                         <!-- You can add more details here if needed -->
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
