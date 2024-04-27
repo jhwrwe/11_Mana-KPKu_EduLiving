@@ -2,7 +2,14 @@
 @section('content')
     <div class="container mt-5">
         <h1>Your Animals</h1>
+        <form method="GET" action="{{ route('create_animal') }}">
+                <br>
+                <button class="btn tambah-button" href="{{ route('create_animal') }}">
+                    Tambah
+                </button>
+            </form>
         <table class="table">
+
             <thead>
                 <tr>
                     <th>Animal</th>
@@ -19,7 +26,7 @@
                 @foreach ($animalls as $user_animal)
                     <tr>
                         <td>{{ $user_animal->animal_name }}</td>
-                        <td><img src="/images/{{ $user_animal->image }}" alt="ada" style="max-width: 100px;"></td>
+                        <td><img src="/images/{{ $user_animal->image }}" alt="no image" style="max-width: 100px;"></td>
                         <td>{{ $user_animal->latin_name }}</td>
                         {{-- <td>{{ $user_animal->species_name }}</td> --}}
                         <td>{{ $user_animal->habitat }}</td>

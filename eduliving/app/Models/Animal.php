@@ -33,7 +33,7 @@ class Animal extends Model
     public function species() {
         return $this->belongsTo(Species::class);
     }
-   
+
 
 //     public function animal_quiz() : HasMany {
 
