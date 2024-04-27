@@ -1,19 +1,43 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreUser_AnimalRequest;
 use App\Http\Requests\UpdateUser_AnimalRequest;
+use App\Models\Species;
 use App\Models\User_Animal;
+use App\Models\Animal;
 
 class UserAnimalController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function gachaAnimal($species)
     {
-        //
+        // Ambil ID spesies berdasarkan nama spesies yang diberikan
+        $speciesId = Species::where('species_name', $species)->value('id');
+    
+        // Ambil semua hewan berdasarkan spesies yang diberikan, dan pastikan bahwa pengguna belum memiliki hewan tersebut
+        $animals = Animal::where('species_id', $speciesId)
+                        ->whereNotIn('id', function ($query) {
+                            $query->select('animal_id')
+                                ->from('user__animals')
+                                ->where('user_id', Auth::id());
+                        })
+                        ->get();
+    
+        // Lakukan pengundian (gacha) untuk memilih satu hewan secara acak
+        $randomAnimal = $animals->random();
+    
+        // Tambahkan entri baru ke dalam tabel user_animals
+        $userAnimal = User_Animal::create([
+            'user_id' => Auth::id(),
+            'animal_id' => $randomAnimal->id
+        ]);
+    
+        // Mengembalikan data hewan yang dipilih untuk menampilkan ke pengguna
+        return $randomAnimal;
     }
 
     /**
@@ -21,7 +45,7 @@ class UserAnimalController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -59,8 +83,5 @@ class UserAnimalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User_Animal $user_Animal)
-    {
-        //
-    }
+
 }

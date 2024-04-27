@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('latin_name');
             $table->unsignedBigInteger('species_id');
-            $table->foreign('species_id')->references('id')->on('specieses')->onDelete('cascade');
+            $table->foreign('species_id')->references('id')->on('species')->onDelete('cascade');
             $table->string('habitat');
             $table->string('continent');
             $table->text('description');
