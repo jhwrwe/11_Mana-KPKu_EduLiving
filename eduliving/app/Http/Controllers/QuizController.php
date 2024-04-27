@@ -2,26 +2,45 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Quiz;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreQuizRequest;
 use App\Http\Requests\UpdateQuizRequest;
-use App\Models\Quiz;
 
 class QuizController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $getquiz = Quiz::where('species_id', $id)->get();
+        return view('quiz', compact('getquiz'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function check(Request $request)
     {
-        //
+        $userAnswers = $request->input('answers');
+        $correctAnswersCount = 0;
+
+        foreach ($userAnswers as $questionId => $userAnswer) {
+            $question = Quiz::find($questionId);
+
+            if ($question && $question->answers === $userAnswer) {
+                $correctAnswersCount++;
+            }
+        }
+
+        if ($correctAnswersCount >= 3) {
+            $message = "Congratulations! You've answered $correctAnswersCount questions correctly and won the prize!";
+        } else {
+            $message = "Sorry, you need to answer at least 3 questions correctly to win the prize. You've answered $correctAnswersCount questions correctly.";
+        }
+
+        return view('quiz.index', compact('message'));
     }
 
     /**

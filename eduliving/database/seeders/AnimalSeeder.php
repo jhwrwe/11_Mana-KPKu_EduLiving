@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 use App\Models\Animal;
 use App\Models\Species;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 
 class AnimalSeeder extends Seeder
 {
