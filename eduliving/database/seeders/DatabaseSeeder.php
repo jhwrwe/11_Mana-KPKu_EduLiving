@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([AnimalSeeder::class]);
 
+        $this->call([QuizSeeder::class]);
+
     }
 }

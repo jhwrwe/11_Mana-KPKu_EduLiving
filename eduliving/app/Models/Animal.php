@@ -23,7 +23,7 @@ class Animal extends Model
 
     public function user() : BelongsTo {
 
-        return $this->belongsTo(Species::class);
+        return $this->belongsTo(User::class);
     }
 
 //     public function animal_quiz() : HasMany {

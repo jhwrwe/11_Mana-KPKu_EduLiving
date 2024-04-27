@@ -16,4 +16,9 @@ class Species extends Model
     public function animals() {
         return $this->hasMany(Animal::class);
     }
+
+    public function quizzes() {
+        return $this->hasMany(Quiz::class);
+    }
+    
 }
