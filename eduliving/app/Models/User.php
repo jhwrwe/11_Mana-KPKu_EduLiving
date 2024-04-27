@@ -63,4 +63,8 @@ public function isUser(): bool{
 }
 return false;
 }
+public function role(){
+    return $this->belongsTo(Role::class);
 }
+}
+

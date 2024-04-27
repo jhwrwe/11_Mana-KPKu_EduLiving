@@ -26,18 +26,23 @@
     <style>
         /* Set height of container */
         .image-container {
-          height: 30vh; /* Set height to 10% of viewport height */
-          overflow: hidden; /* Hide overflowing content */
+            height: 30vh;
+            /* Set height to 10% of viewport height */
+            overflow: hidden;
+            /* Hide overflowing content */
         }
 
         /* Set background image */
         .image-container {
-          background-image: url('images/kebun-binatang-surabaya_169.jpeg');
-          background-size: cover; /* Scale the background image to cover the entire container */
-          background-position: center; /* Center the background image */
-          width: 100vw; /* Set width to 100% of viewport width */
+            background-image: url('images/kebun-binatang-surabaya_169.jpeg');
+            background-size: cover;
+            /* Scale the background image to cover the entire container */
+            background-position: center;
+            /* Center the background image */
+            width: 100vw;
+            /* Set width to 100% of viewport width */
         }
-      </style>
+    </style>
 
 <body>
     <div id="app">
@@ -63,9 +68,9 @@
                                     href="\">Home</a>
                             </li>
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                        <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                            <li class="nav-item">
+                                    <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
                             @endif
 
                             @if (Route::has('register'))
@@ -93,22 +98,20 @@
                                     </form>
                                 </div>
                             </li>
-                            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                                <div class="navbar-nav">
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="/">Home</a>
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="/animals">Animals</a>
-                                    <a class="nav-link text-light {{ $ActiveMaintext ?? '' }}" href="#">Find
-                                        Animals</a>
-                                </div>
-                            </div>
-                        @endguest
-                        @auth
-                            @if (Auth::user()->isAdmin())
+                            @if (Auth::user()->isUser())
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Find">Find</a>
+                                    <a class="nav-link" href="\Find">Find</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Animals">Animals</a>
+                                    <a class="nav-link" href="\Animals">Animals</a>
+                                </li>
+                            @endif
+                            @if (Auth::user()->isAdmin())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/animalsadmin">Create a animal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/alluser">All user</a>
                                 </li>
                             @endif
                         @endauth
