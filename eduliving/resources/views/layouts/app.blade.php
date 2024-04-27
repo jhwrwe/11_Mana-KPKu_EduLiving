@@ -208,7 +208,7 @@
             style="height: 80px;background-color: rgb(44, 86, 0);">
             <div class="container-fluid d-flex align-items-center mx-auto">
                 <a class="navbar-brand" href="#">
-                    <img src="/images/zoo_logo.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
+                    <img src="/images/logokmit.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
                 </a>
                 <a href="/home" style="text-decoration: none; color: inherit;">
                     <h3 class="text-light mt-0 mb-0">EduLiving</h3>

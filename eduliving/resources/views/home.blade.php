@@ -109,7 +109,7 @@
         <table class="my-5 mx-5">
             <tr>
                 <td class="d-none d-sm-table-cell">
-                    <img src="/images/Lovepik_com-401495259-man-communication-icon-free-vector-illustration-material.png"
+                    <img src="/images/kebunbinatang2.jpg"
                         alt="GUmum" class="img-fluid" style="max-width: 100%; height: auto;">
                 </td>
                 <td>
