@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-5 mb-5">
     <h1>Quiz</h1>
 
         <div class="alert alert-info">

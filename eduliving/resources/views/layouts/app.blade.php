@@ -57,12 +57,15 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm align-items-center">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm align-items-center"
+            style="height: 80px;background-color: rgb(44, 86, 0);">
+            <div class="container-fluid d-flex align-items-center mx-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logokmit.png" class="navbar-brand-image" alt="EduLiving" style="height: 50px;">
+                </a>
+                <a href="/home" style="text-decoration: none; color: inherit;">
+                    <h3 class="text-light mt-0 mb-0">EduLiving</h3>
+                </a>
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
