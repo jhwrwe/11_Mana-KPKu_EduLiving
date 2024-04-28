@@ -9,7 +9,7 @@
             margin: 0 auto;
         }
     </style>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <div class="mb-4 menu-title-container">
             <h1 class="w-full text-5xl font-bold leading-tight text-center text-gray-800 menu-title">
                 Add Animal

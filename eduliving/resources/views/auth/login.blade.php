@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <style>
 .login-bg {
     background-image: url('path/to/background-image.jpg');

@@ -52,6 +52,178 @@
         footer p {
             margin-bottom: 0.5rem;
         }
+
+        /* Set background image */
+        .container {
+            position: relative;
+            /* Relative positioning for absolute positioning of child elements */
+        }
+
+        .image-container {
+            z-index: 0;
+            position: relative;
+            /* Required for z-index to work */
+            height: 140vh;
+            /* Set height to 100% of viewport height */
+            overflow-x: hidden;
+            /* Hide horizontal overflow */
+            overflow-y: auto;
+            /* Use auto for more detailed scrolling */
+            background-image: url('images/mapkbs.jpg');
+            background-size: cover;
+            /* Cover the entire container */
+            /* Center the background image */
+            width: 100%;
+            /* Set width to 100% of viewport width */
+        }
+
+        .circle-button1 {
+            position: absolute;
+            /* Absolute positioning */
+            top: 80%;
+            /* Position at the vertical center */
+            left: 30%;
+            /* Position at the horizontal center */
+            transform: translate(-50%, -50%);
+            /* Center the button */
+            width: 50px;
+            /* Adjust the width and height for the size of the circle */
+            height: 50px;
+            background-color: #ee0b0b;
+            /* Change background color as desired */
+            border-radius: 50%;
+            /* Make it a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+            /* Ensure the button is above the image */
+        }
+
+        .circle-button1:hover {
+            background-color: #0056b3;
+            /* Change hover background color as desired */
+        }
+
+        .circle-button1 a {
+            color: white;
+            /* Change text color as desired */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .circle-button2 {
+            position: absolute;
+            /* Absolute positioning */
+            top: 140%;
+            /* Position at the vertical center */
+            left: 30%;
+            /* Position at the horizontal center */
+            transform: translate(-50%, -50%);
+            /* Center the button */
+            width: 50px;
+            /* Adjust the width and height for the size of the circle */
+            height: 50px;
+            background-color: #ee0b0b;
+            /* Change background color as desired */
+            border-radius: 50%;
+            /* Make it a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+            /* Ensure the button is above the image */
+        }
+
+        .circle-button2:hover {
+            background-color: #0056b3;
+            /* Change hover background color as desired */
+        }
+
+        .circle-button2 a {
+            color: white;
+            /* Change text color as desired */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .circle-button3 {
+            position: absolute;
+            /* Absolute positioning */
+            top: 80%;
+            /* Position at the vertical center */
+            left: 70%;
+            /* Position at the horizontal center */
+            transform: translate(-50%, -50%);
+            /* Center the button */
+            width: 50px;
+            /* Adjust the width and height for the size of the circle */
+            height: 50px;
+            background-color: #ee0b0b;
+            /* Change background color as desired */
+            border-radius: 50%;
+            /* Make it a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+            /* Ensure the button is above the image */
+        }
+
+        .circle-button3:hover {
+            background-color: #0056b3;
+            /* Change hover background color as desired */
+        }
+
+        .circle-button3 a {
+            color: white;
+            /* Change text color as desired */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .circle-button4 {
+            position: absolute;
+            /* Absolute positioning */
+            top: 140%;
+            /* Position at the vertical center */
+            left: 70%;
+            /* Position at the horizontal center */
+            transform: translate(-50%, -50%);
+            /* Center the button */
+            width: 50px;
+            /* Adjust the width and height for the size of the circle */
+            height: 50px;
+            background-color: #ee0b0b;
+            /* Change background color as desired */
+            border-radius: 50%;
+            /* Make it a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+            /* Ensure the button is above the image */
+        }
+
+        .circle-button4:hover {
+            background-color: #0056b3;
+            /* Change hover background color as desired */
+        }
+
+        .circle-button4 a {
+            color: white;
+            /* Change text color as desired */
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -69,23 +241,14 @@
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        @auth
 
 
-                    @if (Auth::user()->isAdmin())
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/adminuser">All Users</a>
-                                </li>
 
-                        @endif
-                         @endauth
+
                     </ul>
                 </div>
 
-                <a class="navbar-brand" href="#">
-                    <img src="/images/_0b9d7ca0-ba1b-41d5-88b7-a5e2295d9277-removebg-preview-removebg-preview.png" alt="EduLiving">
-                    <h3 class="d-inline">EduLiving</h3>
-                </a>
+
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
@@ -125,6 +288,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/adminanimals">All Animals</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/adminuser">All Users</a>
+                                </li>
+
+
                             @endif
                         @endguest
                     </ul>
